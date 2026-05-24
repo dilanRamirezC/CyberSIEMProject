@@ -3,7 +3,7 @@
 $servidor = "localhost";
 $usuario = "root";
 $password = "1234";
-$bd = "siem";
+$bd = "SIEM";
 
 $conexion = mysqli_connect($servidor, $usuario, $password, $bd);
 
