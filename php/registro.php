@@ -35,6 +35,31 @@
                 placeholder="Contraseña"
                 required
             >
+            <input 
+                type="apellido"
+                name="apellido"
+                placeholder="apeliido"
+                required
+            >
+            <select name="id_rol" required>
+
+    <option value="">
+        Seleccione un rol
+    </option>
+
+    <option value="1">
+        Administrador
+    </option>
+
+    <option value="2">
+        Auditor
+    </option>
+
+    <option value="3">
+        Analista
+    </option>
+
+</select>
 
             <button type="submit">
                 Registrarse

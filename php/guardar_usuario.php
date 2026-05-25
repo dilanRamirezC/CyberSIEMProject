@@ -5,6 +5,8 @@ include("conexion.php");
 $nombre = $_POST['nombre'];
 $correo = $_POST['correo'];
 $contrasena = $_POST['contrasena'];
+$apellido = $_POST['apellido'];
+$id_rol = $_POST['id_rol'];
 
 /* VALIDAR CORREO */
 
@@ -26,9 +28,9 @@ if(
 /* INSERTAR USUARIO */
 
 $query = "INSERT INTO usuarios
-(nombre, correo, contrasena)
+(nombre, correo, contrasena, apellido,id_rol)
 VALUES
-('$nombre','$correo','$contrasena')";
+('$nombre','$correo','$contrasena','$apellido','$id_rol')";
 
 $resultado = mysqli_query($conexion, $query);
 

@@ -2,7 +2,7 @@
 
 $servidor = "localhost";
 $usuario = "root";
-$password = "";
+$password = "1234";
 $bd = "siem_academico";
 
 $conexion = mysqli_connect($servidor, $usuario, $password, $bd);

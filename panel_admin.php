@@ -1,20 +1,8 @@
 <?php
-/* ============================================================
-   panel_admin.php
-   Panel de Administración — Archivo independiente
-   ────────────────────────────────────────────────
-   • Usa tu conexion.php con mysqli_connect (procedural)
-   • Usa tu login con $_SESSION['correo']
-   • No depende de config.php, includes/ ni del resto del SIEM
-   • Coloca este archivo en la MISMA carpeta que conexion.php
-   ============================================================ */
+
  
 session_start();
-require_once "php/conexion.php";   // tu archivo: usa $conexion
- 
-// ============================================================
-// GUARD 1 — Sesión activa
-// ============================================================
+require_once "php/conexion.php";   
 if (!isset($_SESSION['correo'])) {
     header("Location: login.php");
     exit;
@@ -22,10 +10,7 @@ if (!isset($_SESSION['correo'])) {
  
 $correoSesion = $_SESSION['correo'];
  
-// ============================================================
-// GUARD 2 — Verificar en BD que el usuario existe,
-//            está activo Y tiene rol Administrador
-// ============================================================
+
 $sqlGuard = "SELECT u.id_usuario, u.nombre, u.apellido,
                     u.estado, r.nombre_rol, u.id_rol
              FROM usuarios u
@@ -714,10 +699,10 @@ HTML;
     <div class="sb-section">Seguridad</div>
     <a href="logs/index.php"       class="sb-item"><span class="ico"><i class="fa-solid fa-terminal"></i></span>Logs</a>
     <a href="alertas/index.php"    class="sb-item"><span class="ico"><i class="fa-solid fa-bell"></i></span>Alertas</a>
-    <a href="incidentes/index.php" class="sb-item"><span class="ico"><i class="fa-solid fa-triangle-exclamation"></i></span>Incidentes</a>
+    <a href="php/incidentes.php" class="sb-item"><span class="ico"><i class="fa-solid fa-triangle-exclamation"></i></span>Incidentes</a>
  
     <div class="sb-section">Análisis</div>
-    <a href="reportes/index.php" class="sb-item"><span class="ico"><i class="fa-solid fa-chart-bar"></i></span>Reportes</a>
+    <a href="php/reportes.php" class="sb-item"><span class="ico"><i class="fa-solid fa-chart-bar"></i></span>Reportes</a>
  
     <div class="sb-section">Administración</div>
     <a href="panel_admin.php" class="sb-item active">
