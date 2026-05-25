@@ -17,7 +17,7 @@ if(mysqli_num_rows($resultado) > 0){
 
     $_SESSION['correo'] = $correo;
 
-    header("Location: ../dashboard.php");
+    header("Location: ../panel_admin.php");
 
 }else{
 
