@@ -48,10 +48,14 @@
                     <button type="submit">
                         Iniciar Sesión
                      </button>
-
-                     <button type="button" class="btn-register">
-                     Registrarse
-                     </button>
+<button 
+    type="button" 
+    class="btn-register"
+    onclick="window.location.href='php/registro.php'"
+>
+    Registrarse
+</button>
+                  
 
                 </form>
 

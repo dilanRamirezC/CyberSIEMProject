@@ -151,3 +151,63 @@ body{
     border: 2px solid #2563eb;
     color: #2563eb;
 }
+
+
+/* REGISTRO */
+
+.register-container{
+    width: 400px;
+    margin: auto;
+    margin-top: 80px;
+
+    background-color: #dbeafe;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+
+.register-container h1{
+    text-align: center;
+    margin-bottom: 30px;
+
+    color: #1d4ed8;
+}
+
+.register-container input{
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #93c5fd;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+}
+
+.register-container button{
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.register-container button:hover{
+    background-color: #1d4ed8;
+}
