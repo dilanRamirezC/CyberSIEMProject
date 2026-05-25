@@ -694,11 +694,11 @@ HTML;
  
     <div class="sb-section">Gestión</div>
     <a href="usuarios/index.php" class="sb-item"><span class="ico"><i class="fa-solid fa-users"></i></span>Usuarios</a>
-    <a href="equipos/index.php"  class="sb-item"><span class="ico"><i class="fa-solid fa-server"></i></span>Equipos</a>
+    <a href="php/equipos.php"  class="sb-item"><span class="ico"><i class="fa-solid fa-server"></i></span>Equipos</a>
  
     <div class="sb-section">Seguridad</div>
-    <a href="logs/index.php"       class="sb-item"><span class="ico"><i class="fa-solid fa-terminal"></i></span>Logs</a>
-    <a href="alertas/index.php"    class="sb-item"><span class="ico"><i class="fa-solid fa-bell"></i></span>Alertas</a>
+    <a href="php/logs.php"       class="sb-item"><span class="ico"><i class="fa-solid fa-terminal"></i></span>Logs</a>
+    <a href="php/alertas.php"    class="sb-item"><span class="ico"><i class="fa-solid fa-bell"></i></span>Alertas</a>
     <a href="php/incidentes.php" class="sb-item"><span class="ico"><i class="fa-solid fa-triangle-exclamation"></i></span>Incidentes</a>
  
     <div class="sb-section">Análisis</div>

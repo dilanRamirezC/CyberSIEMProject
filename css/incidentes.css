@@ -1,0 +1,219 @@
+/* =========================
+   ESTILO GENERAL
+========================= */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor-reportes{
+    width: 90%;
+    margin: 40px auto;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   TITULO
+========================= */
+
+h1{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #38bdf8;
+    font-size: 32px;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+/* INPUTS Y SELECT */
+
+input[type="text"],
+input[type="number"],
+select{
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #334155;
+    color: white;
+    font-size: 14px;
+    width: 250px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus{
+    background: #475569;
+    box-shadow: 0px 0px 8px #38bdf8;
+}
+
+input::placeholder{
+    color: #cbd5e1;
+}
+
+/* SELECT */
+
+select option{
+    background: #1e293b;
+    color: white;
+}
+
+/* =========================
+   BOTON
+========================= */
+
+button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover{
+    background: #0ea5e9;
+    transform: scale(1.05);
+}
+
+/* =========================
+   TABLA
+========================= */
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* ENCABEZADO */
+
+thead{
+    background: #2563eb;
+}
+
+thead th{
+    padding: 15px;
+    text-align: left;
+    color: white;
+    font-size: 14px;
+}
+
+/* FILAS */
+
+tbody tr{
+    background: #334155;
+    transition: 0.3s;
+}
+
+tbody tr:nth-child(even){
+    background: #475569;
+}
+
+tbody tr:hover{
+    background: #0ea5e9;
+}
+
+/* CELDAS */
+
+tbody td{
+    padding: 14px;
+    border-bottom: 1px solid #64748b;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 768px){
+
+    .contenedor-reportes{
+        width: 95%;
+        padding: 15px;
+    }
+
+    form{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    button{
+        width: 100%;
+    }
+
+    table{
+        font-size: 12px;
+    }
+
+    thead{
+        display: none;
+    }
+
+    table,
+    tbody,
+    tr,
+    td{
+        display: block;
+        width: 100%;
+    }
+
+    tr{
+        margin-bottom: 15px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    td{
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before{
+        position: absolute;
+        left: 15px;
+        top: 12px;
+        font-weight: bold;
+        color: #38bdf8;
+    }
+
+    td:nth-child(1)::before{ content: "ID"; }
+    td:nth-child(2)::before{ content: "Alerta"; }
+    td:nth-child(3)::before{ content: "Título"; }
+    td:nth-child(4)::before{ content: "Descripción"; }
+    td:nth-child(5)::before{ content: "Prioridad"; }
+    td:nth-child(6)::before{ content: "Estado"; }
+    td:nth-child(7)::before{ content: "Usuario"; }
+    td:nth-child(8)::before{ content: "Fecha"; }
+
+}
